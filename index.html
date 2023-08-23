@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Cat Generator</title>
+    <style>
+        *
+        {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            
+        }
+
+        body
+        {
+            min-height: 100vh;
+            background: #0c192c;
+        }
+
+        #all
+        {
+            width: 100%;
+            height: 700px;
+            overflow: hidden;
+            
+        }
+
+        #top
+        {
+            margin-left: auto;
+            margin-right: auto;
+            width: 1000px;
+            height: 100px;
+            background-color: rgb(48, 48, 74);
+            border-radius: 10px;
+            opacity: 90%;
+            display: flex;
+            align-items: center;
+        }
+
+        #bot
+        {
+            width: 1000px;
+            height: 550px;
+            background-color: rgb(46, 41, 54);
+            margin-left: auto;
+            margin-right: auto;
+            border-radius: 10px;
+            margin-top: 10px;
+
+     
+        }
+        #bot2
+        {
+            width: 950px;
+            height: 95%;
+            background-color: rgb(67, 60, 79);
+            margin-left: auto;
+            margin-right: auto;
+            border-radius: 10px;
+            align-items: center;
+            align-content: center;
+            display: flex;
+
+         
+        }
+
+        img {
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 950px;
+    max-height: 500px;
+    opacity: 100%;
+    z-index: 1000;
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.6); /* Zmienione wartości cienia */
+    transition: box-shadow 0.3s ease;
+}
+
+        button {
+            background-color: #9f9778;
+            border: none;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 10px;
+            box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+            display: flex;
+            margin-left: auto;
+            margin-right: auto;
+            font-family:Verdana, Geneva, Tahoma, sans-serif;
+            font-weight: bold;
+            
+        }
+
+        button:hover {
+            background-color: #ffa500;
+        }
+
+        button:active {
+            background-color: #ff6600;
+        }
+
+        .bubbles
+        {
+            position:relative;
+            display: flex;
+            pointer-events: none;
+            z-index: -1;
+            opacity: 40%;
+        }
+
+        .bubbles span
+        {
+            position: relative;
+            width:30px;
+            height: 30px;
+            background: #4fc3dc;
+            margin: 0 4px;
+            border-radius: 50%;
+            box-shadow: 0 0 0 10px #4fc3dc44,
+            0 0 50px #4fc3dc,
+            0 0 100px #4fc3dc;
+            animation: animate 15s linear infinite;
+            animation-duration: calc(125s /var(--i)) ;
+        }
+
+        .bubbles span:nth-child(even)
+        {
+            background: #ff2d75;
+            box-shadow: 0 0 0 10px #ff2d7544,
+            0 0 50px #ff2d75,
+            0 0 100px #ff2d75;
+        }
+
+        @keyframes animate
+        {
+            0%
+            {
+                transform : translateY(100vh) scale(0);
+            }
+            100%
+            {
+                transform : translateY(-10vh) scale(1);
+            }
+        }
+        @media (max-width: 768px) {
+        #top, #bot, #bot2 {
+            max-width: 100%;
+            width: auto;
+            margin: 10px;
+            border-radius: 5px;
+            
+        }
+        
+
+        img {
+            max-width: 100%;
+        }
+        .bubbles {
+            display: none; /* Ukryj efekt "bubbles" na telefonach */
+        }
+    }
+     
+    </style>
+</head>
+<body>
+    <div id="all">
+   
+       
+    <div class="bubbles">
+        <span style="--i:11;"></span>
+        <span style="--i:12;"></span>
+        <span style="--i:24;"></span>
+        <span style="--i:10;"></span>
+        <span style="--i:14;"></span>
+        <span style="--i:23;"></span>
+        <span style="--i:18;"></span>
+        <span style="--i:16;"></span>
+        <span style="--i:19;"></span>
+        <span style="--i:20;"></span>
+        <span style="--i:22;"></span>
+        <span style="--i:25;"></span>
+        <span style="--i:18;"></span>
+        <span style="--i:21;"></span>
+        <span style="--i:15;"></span>
+        <span style="--i:13;"></span>
+        <span style="--i:26;"></span>
+        <span style="--i:17;"></span>
+        <span style="--i:13;"></span>
+        <span style="--i:28;"></span>
+        <span style="--i:11;"></span>
+        <span style="--i:12;"></span>
+        <span style="--i:24;"></span>
+        <span style="--i:10;"></span>
+        <span style="--i:14;"></span>
+        <span style="--i:23;"></span>
+        <span style="--i:18;"></span>
+        <span style="--i:16;"></span>
+        <span style="--i:19;"></span>
+        <span style="--i:20;"></span>
+        <span style="--i:22;"></span>
+        <span style="--i:25;"></span>
+        <span style="--i:18;"></span>
+        <span style="--i:21;"></span>
+        <span style="--i:15;"></span>
+        <span style="--i:13;"></span>
+        <span style="--i:26;"></span>
+        <span style="--i:17;"></span>
+        <span style="--i:13;"></span>
+        <span style="--i:28;"></span>
+        <span style="--i:11;"></span>
+       
+        
+    </div>
+    <div id="top">
+        <button id="catButton">RANDOM</button>
+       </div>
+    <div id="bot">
+        <div id="bot2">
+        <img id="catImage" src="" alt="Random Cat">
+        <script src="script.js"></script>
+    </div>
+    </div>
+</div>
+
+</div>
+
+
+
+</body>
+</html>
